@@ -4,6 +4,8 @@ import cors from 'cors';
 import express from 'express';
 import mongoose from 'mongoose';
 
+import { migrationUp } from './migrations';
+
 const PORT = process.env.PORT || 4000;
 
 const connectToMongo = async () => {
@@ -23,6 +25,8 @@ const app = express();
 
 app.use(cors());
 app.use(bodyParser({extended: true}));
+
+app.get('/migration-up', migrationUp);
 
 app.listen(PORT, () => {
 	console.log(`server running on port ${PORT}`);

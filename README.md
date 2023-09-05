@@ -1,5 +1,5 @@
 # docker_typescript_mongodb
-Docker + TypeScript + MongoDB
+Docker + TypeScript + MongoDB + Migrations
 
 Start the server
 ```
