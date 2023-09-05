@@ -3,5 +3,10 @@ Docker + TypeScript + MongoDB + Migrations
 
 Start the server
 ```
-npm start
+make build
+make up
+```
+Stop the server
+```
+make down
 ```
